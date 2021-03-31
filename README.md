@@ -112,9 +112,33 @@ from fbprophet.plot import plot_cross_validation_metric
 ![new cases ](./images/prophet2.png)
 
 ## we can see that the accuracy of the model with the help of the rmse plot. we can see the point lie far from the line which mention the model dose not show good acuracy. 
-
 #
+# SIR MODEL
 
+The SIR model is one of the simplest compartmental models, and many models are derivatives of this basic form. The model consists of three compartments:-
+S: The number of susceptible individuals. When a susceptible and an infectious individual come into "infectious contact", the susceptible individual contracts the disease and transitions to the infectious compartment.
+I: The number of infectious individuals. These are individuals who have been infected and are capable of infecting susceptible individuals.
+R for the number of removed (and immune) or deceased individuals. These are individuals who have been infected and have either recovered from the disease and entered the removed compartment, or died. It is assumed that the number of deaths is negligible with respect to the total population. This compartment may also be called "recovered" or "resistant".
+The dynamics of an epidemic, for example, the flu, are often much faster than the dynamics of birth and death, therefore, birth and death are often omitted in simple compartmental models. The SIR system without so-called vital dynamics (birth and death, sometimes called demography) described above can be expressed by the following set of ordinary differential equations:
+S = S(t) is the number of susceptible individuals,
+
+I = I(t) is the number of infected individuals, and
+
+R = R(t) is the number of recovered individuals.
+
+s(t) = S(t)/N, the susceptible fraction of the population,
+
+i(t) = I(t)/N, the infected fraction of the population, and
+
+r(t) = R(t)/N, the recovered fraction of the population.
+
+s(t) + i(t) + r(t) = 1.
+
+No one is added to the susceptible group, since we are ignoring births and immigration. The only way an individual leaves the susceptible group is by becoming infected. We assume that the time-rate of change of S(t), the number of susceptibles,1 depends on the number already susceptible, the number of individuals already infected, and the amount of contact between susceptibles and infecteds. In particular, suppose that each infected individual has a fixed number b of contacts per day that are sufficient to spread the disease. Not all these contacts are with susceptible individuals. If we assume a homogeneous mixing of the population, the fraction of these contacts that are with susceptibles is s(t). Thus, on average, each infected individual generates b s(t) new infected individuals per day. [With a large susceptible population and a relatively small infected population, we can ignore tricky counting situations such as a single susceptible encountering more than one infected in a given day.]
+
+We also assume that a fixed fraction k of the infected group will recover during any given day. For example, if the average duration of infection is three days, then, on average, one-third of the currently infected population recovers each day.
+
+![img](./images/Screenshot(163).png)
 
 
 # MULTIPLE LINEAR REGRESSION MODEL 
@@ -171,7 +195,7 @@ df_grouped2 =df_germany[  ( df_germany['month'] == 'January2021') |( df_germany[
 
 
 
- * Test data score 0.91
+* Train data score 0.91
 * Regression score for second wave 0.88
 * Mean absolute error: 0.04
 * Residual sum of squares (MSE): 0.00
