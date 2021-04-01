@@ -11,7 +11,7 @@ The following repository contains the Note book dealing with Covid 19 data analy
 -  Modeling the data with various model with appropriate feature selection techniques.
 
 ## ABOUT THE DATA
- ### The data is obtaind for the website ourworldindata.org 
+### The data is obtaind for the website ourworldindata.org 
   
 - data source:  https://ourworldindata.org/coronavirus-source-data
 - data type available : .xslx .csv .json (daily updated)
