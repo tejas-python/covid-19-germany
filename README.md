@@ -138,10 +138,27 @@ s(t) + i(t) + r(t) = 1.
 No one is added to the susceptible group, since we are ignoring births and immigration. The only way an individual leaves the susceptible group is by becoming infected. We assume that the time-rate of change of S(t), the number of susceptibles,1 depends on the number already susceptible, the number of individuals already infected, and the amount of contact between susceptibles and infecteds. In particular, suppose that each infected individual has a fixed number b of contacts per day that are sufficient to spread the disease. Not all these contacts are with susceptible individuals. If we assume a homogeneous mixing of the population, the fraction of these contacts that are with susceptibles is s(t). Thus, on average, each infected individual generates b s(t) new infected individuals per day. [With a large susceptible population and a relatively small infected population, we can ignore tricky counting situations such as a single susceptible encountering more than one infected in a given day.]
 
 We also assume that a fixed fraction k of the infected group will recover during any given day. For example, if the average duration of infection is three days, then, on average, one-third of the currently infected population recovers each day.
+●N : Total population
+
+●S(t) : Number of people susceptible on day t
+
+●I(t) : Number of people infected on day t
+
+●β (beta) : Expected amount of people an infected person infects per day. β is thetransmission rate constant.
+
+●D : Number of days an infected person has and can spread the disease
+
+●γ (gama) : The proportion of infected removed per day (γ = 1/D). γ the removal rateconstant.
 
 ![img](./images/Screenshot(163).png)
 ### The model developed 
 ![img](./images/sir.png)
+
+### The evaluation score 
+* Mean absolute error: 0.22
+* Residual sum of squares (MSE): 0.10
+* R2 score -0.99
+![img](./images/sir1.png)
 
 # MULTIPLE LINEAR REGRESSION MODEL 
 ### What Is Multiple Linear Regression (MLR)?
